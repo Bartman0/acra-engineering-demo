@@ -151,6 +151,7 @@ services:
         # networks)
         ports:
             - "9494:9494"
+            - "9191:9191"
         environment:
             ACRA_MASTER_KEY: ${ACRA_CONNECTOR_MASTER_KEY:-MElBVnhEeTd3b29JMFVVcnhGMXJPT3BxZUVwWW5wS3E=}
         # We use internal networks:

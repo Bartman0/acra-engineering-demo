@@ -295,7 +295,7 @@ Resources that will become available after launch:
 }
 
 acraengdemo_git_clone_acraengdemo() {
-    COSSACKLABS_ACRAENGDEMO_VCS_URL='https://github.com/cossacklabs/acra-engineering-demo'
+    COSSACKLABS_ACRAENGDEMO_VCS_URL='https://github.com/Bartman0/acra-engineering-demo'
     COSSACKLABS_ACRAENGDEMO_VCS_BRANCH=${COSSACKLABS_ACRAENGDEMO_VCS_BRANCH:-master}
     acraengdemo_cmd \
         "git clone --depth 1 -b $COSSACKLABS_ACRAENGDEMO_VCS_BRANCH $COSSACKLABS_ACRAENGDEMO_VCS_URL" \
@@ -307,7 +307,7 @@ acraengdemo_run_compose() {
     DC_FILE="acra-engineering-demo/$demo_project_name/docker-compose.$demo_project_name.yml"
 
     acraengdemo_add_cleanup_cmd \
-        'docker image prune --all --force --filter "label=com.cossacklabs.product.name=acra-engdemo"' \
+        'docker image prune --all --force --filter "label=com.Bartman0.product.name=acra-engdemo"' \
         'remove custom built images'
     acraengdemo_cmd "$COMPOSE_ENV_VARS docker-compose -f $DC_FILE pull" 'Pull fresh images'
 
@@ -320,7 +320,7 @@ acraengdemo_run_compose() {
 acraengdemo_launch_project_django() {
     acraengdemo_git_clone_acraengdemo
 
-    COSSACKLABS_DJANGO_VCS_URL='https://github.com/cossacklabs/djangoproject.com'
+    COSSACKLABS_DJANGO_VCS_URL='https://github.com/Bartman0/djangoproject.com'
     COSSACKLABS_DJANGO_VCS_BRANCH=${COSSACKLABS_DJANGO_VCS_BRANCH:-master}
     acraengdemo_cmd \
         "git clone --depth 1 -b $COSSACKLABS_DJANGO_VCS_BRANCH $COSSACKLABS_DJANGO_VCS_URL" \
@@ -359,7 +359,7 @@ acraengdemo_launch_project_django-transparent() {
 acraengdemo_launch_project_python() {
     acraengdemo_git_clone_acraengdemo
 
-    COSSACKLABS_ACRA_VCS_URL='https://github.com/cossacklabs/acra'
+    COSSACKLABS_ACRA_VCS_URL='https://github.com/Bartman0/acra'
     COSSACKLABS_ACRA_VCS_BRANCH=${COSSACKLABS_ACRA_VCS_BRANCH:-master}
     acraengdemo_cmd \
         "git clone --depth 1 -b $COSSACKLABS_ACRA_VCS_BRANCH $COSSACKLABS_ACRA_VCS_URL" \
@@ -380,7 +380,7 @@ acraengdemo_launch_project_python() {
 acraengdemo_launch_project_rails() {
     acraengdemo_git_clone_acraengdemo
 
-    COSSACKLABS_RUBYGEMS_VCS_URL='https://github.com/cossacklabs/rubygems.org'
+    COSSACKLABS_RUBYGEMS_VCS_URL='https://github.com/Bartman0/rubygems.org'
     COSSACKLABS_RUBYGEMS_VCS_BRANCH=${COSSACKLABS_RUBYGEMS_VCS_BRANCH:-master}
     acraengdemo_cmd \
         "git clone --depth 1 -b $COSSACKLABS_RUBYGEMS_VCS_BRANCH $COSSACKLABS_RUBYGEMS_VCS_URL" \
